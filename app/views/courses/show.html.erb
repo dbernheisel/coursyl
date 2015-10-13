@@ -205,6 +205,7 @@
             <td><%= percentage(a.percent_of_grade) %></td>
             <td class="text-right">
               <%= render partial: "/assignments/row_buttons", locals: {assignment: a} %>
+              <%= render partial: "/assignments/time_modal", locals: {assignment: a} %>
             </td>
           </tr>
         <% end %>

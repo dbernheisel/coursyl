@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require font-awesome
+ *= require jquery-ui
  *= require_tree .
  */
 
@@ -137,4 +138,3 @@ td.text-right, th.text-right {
 .bold {
   font-weight: bold;
 }
-

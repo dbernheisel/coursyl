@@ -1,0 +1,20 @@
+<%# required local variable 'assignment' %>
+<div class="modal hide fade time-modal">
+  <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 class="assignment-time-modal-header"><%= assignment.name %></h3>
+    </div>
+    <%= form_for(assignment) do |f| %>
+    <div class="modal-body">
+      <%= f.label :active_at %>
+      <%= f.text_field :active_at, class: "datetimepicker", type: "datetime-local", value: assignment.active_at.strftime("%Y-%m-%dT%H:%M") %>
+      <%= f.label :due_at %>
+      <%= f.text_field :due_at, class: "datetimepicker", type: "datetime-local", value: assignment.due_at.strftime("%Y-%m-%dT%H:%M") %>
+    </div>
+    <div class="modal-footer">
+      <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+      <%= f.submit 'Save changes', class: "btn btn-primary"  %>
+    </div>
+    <% end %>
+  </div>
+</div>
