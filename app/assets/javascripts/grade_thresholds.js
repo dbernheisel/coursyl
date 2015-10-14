@@ -14,4 +14,10 @@ $(function (){
   $(".delete-association").on("click", hideDeletedRowForDestroy );
   $(".flush-association").on("click", hideDeletedRowForDestroy );
   $(".new-association").on("click", addGradeThreshold );
+
+  $('input[type=submit]').on("click", function() {
+    $(this).attr('disabled', true);
+    $(this).parents('form').submit()
+  });
+
 });
