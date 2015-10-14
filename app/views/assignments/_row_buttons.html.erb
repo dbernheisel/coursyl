@@ -9,7 +9,7 @@
     <i class="fa fa-legal muted"></i>
     <i class="fa fa-bar-chart-o muted"></i>
   <% else %>
-    <%= link_to '<i class="fa fa-calendar" title="Edit Assignment Dates"></i>'.html_safe, "javascript:void(0)", class: "assignment-time" %>
+    <%= link_to '<i class="fa fa-calendar" title="Edit Assignment Dates"></i>'.html_safe, "#time-modal-#{assignment.id}", class: "assignment-time", data: {toggle: "modal"} %>
     <% if assignment.students_can_submit %>
       <%= link_to '<i class="fa fa-legal" title="Grade Assignment"></i>'.html_safe, grade_assignment_path(assignment) %>
     <% else %>
